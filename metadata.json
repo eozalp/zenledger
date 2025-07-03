@@ -1,0 +1,8 @@
+{
+  "name": "ZenLedger - Offline Accounting",
+  "description": "A local-first, offline-ready, double-entry accounting system designed for simplicity and privacy. All your financial data is stored securely on your device.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "prompt": ""
+}

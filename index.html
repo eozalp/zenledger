@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-zinc-950">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZenLedger - Offline Accounting</title>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#18181b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ZenLedger">
+    <link rel="apple-touch-icon" href="/icons/icon-192.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Page Transition Animations */
+      .page-enter {
+        opacity: 0;
+      }
+      .page-enter-active {
+        opacity: 1;
+        transition: opacity 300ms ease-out;
+      }
+      .page-exit {
+        opacity: 1;
+      }
+      .page-exit-active {
+        opacity: 0;
+        transition: opacity 300ms ease-in;
+      }
+
+      .page-backward-enter {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      .page-backward-enter-active {
+        opacity: 1;
+        transform: translateX(0%);
+        transition: opacity 300ms ease-out, transform 300ms ease-out;
+      }
+      .page-backward-exit {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      .page-backward-exit-active {
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 300ms ease-in, transform 300ms ease-in;
+      }
+
+      /* Modal Transition Animations */
+      .modal-enter {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      .modal-enter-active {
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity 200ms ease-out, transform 200ms ease-out;
+      }
+      .modal-exit {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .modal-exit-active {
+        opacity: 0;
+        transform: scale(0.9);
+        transition: opacity 200ms ease-in, transform 200ms ease-in;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'debit': 'hsl(142.1 76.2% 42.2%)', // Green
+              'credit': 'hsl(346.8 77.2% 49.8%)', // Rose
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="h-full antialiased" style="font-size: 110%;">
+    <div id="root" class="h-full"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -6,8 +6,9 @@ import fs from 'fs';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+      base: './',
       server: {
-        https: false
+        https: true
       },
       build: {
         minify: true,

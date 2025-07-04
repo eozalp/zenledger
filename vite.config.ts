@@ -47,8 +47,8 @@ export default defineConfig(({ mode }) => {
             ],
           },
           workbox: {
-            mode: 'development',
             sourcemap: false,
+            mode: 'development',
           }
         })
       ],

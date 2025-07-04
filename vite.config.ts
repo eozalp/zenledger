@@ -6,7 +6,7 @@ import fs from 'fs';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: '/zenledger/',
+      base: './',
       server: {
         https: true
       },
@@ -48,7 +48,7 @@ export default defineConfig(({ mode }) => {
           },
           workbox: {
             sourcemap: false,
-            mode: 'development',
+            mode: 'development'
           }
         })
       ],
